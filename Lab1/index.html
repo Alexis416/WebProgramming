@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Магазин электроники</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Магазин электроники</h1>
+    <div id="cart-icon">🛒 Корзина (<span id="cart-count">0</span>)</div>
+  </header>
+  <main>
+    <section class="products">
+      <!-- Пример 10 товаров -->
+      <div class="product" data-id="1" data-name="iPhone 14 Pro" data-price="100000">
+        <img src="https://via.placeholder.com/150?text=iPhone+14+Pro" alt="iPhone 14 Pro">
+        <h3>iPhone 14 Pro</h3>
+        <p class="price">Цена: 100000 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </div>
+      <div class="product" data-id="2" data-name="Samsung Galaxy S22" data-price="80000">
+        <img src="https://via.placeholder.com/150?text=Samsung+S22" alt="Samsung Galaxy S22">
+        <h3>Samsung Galaxy S22</h3>
+        <p class="price">Цена: 80000 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </div>
+      <!-- ... ещё 8 товаров аналогичным образом ... -->
+    </section>
+    <section id="cart-block" class="cart hidden">
+      <h2>Корзина</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">Итого: <span id="cart-total">0</span> руб.</div>
+      <h3>Оформление заказа</h3>
+      <form id="order-form">
+        <label>Имя: <input type="text" name="name" required></label>
+        <label>Телефон: <input type="tel" name="phone" required></label>
+        <label>Адрес: <textarea name="address" required></textarea></label>
+        <button type="submit">Оформить заказ</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
