@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Магазин электроники</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Магазин электроники</h1>
+    <div id="cart-icon">🛒 Корзина (<span id="cart-count">0</span>)</div>
+  </header>
+  <main>
+    <section class="products">
+      <!-- 6 товаров -->
+      <article class="product" data-id="1" data-name="iPhone 14 Pro" data-price="99990">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-family-select?wid=940&hei=1112&fmt=jpeg&qlt=90&.v=1660759995965" alt="iPhone 14 Pro">
+        <h3>iPhone 14 Pro</h3>
+        <p class="price">Цена: 99990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="2" data-name="Samsung Galaxy S23" data-price="79990">
+        <img src="https://shop.gestore.ru/upload/iblock/763/371jobbxcs6eav34ft2rnpl1rsvojm62.png" alt="Samsung Galaxy S23">
+        <h3>Samsung Galaxy S23</h3>
+        <p class="price">Цена: 79990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="3" data-name="Xiaomi REDMI 15C" data-price="12500">
+        <img src="https://krasnodar.gadgets-land.ru/files/uploads/new/15c.jpg" alt="Xiaomi REDMI 15C">
+        <h3>Xiaomi REDMI 15C</h3>
+        <p class="price">Цена: 12500 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="4" data-name="Apple MacBook Air M2" data-price="134990">
+        <img src="https://cdn.eraspace.com/pub/media/wysiwyg/PB/Asset_76_4x.png" alt="Apple MacBook Air M2">
+        <h3>Apple MacBook Air M2</h3>
+        <p class="price">Цена: 134990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="5" data-name="ASUS Vivobook 15 OLED" data-price="89990">
+        <img src="https://avatars.mds.yandex.net/get-mpic/4466428/2a00000195eb631f7e461211cc973e718f2e/orig" alt="ASUS Vivobook 15 OLED">
+        <h3>ASUS Vivobook 15 OLED</h3>
+        <p class="price">Цена: 89990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="6" data-name="DEXP Atlas M15-I5W30" data-price="34990">
+        <img src="https://c.dns-shop.ru/thumb/st1/fit/0/0/727e30026dfea5514e51478482047263/0e6a1071102f7c8624f6b393b27db7c5930ca741559ba027786ff358b91ff363.jpg" alt="DEXP Atlas M15-I5W30">
+        <h3>DEXP Atlas M15-I5W30</h3>
+        <p class="price">Цена: 34990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="7" data-name="Lenovo Legion T5" data-price="109990">
+        <img src="https://avatars.mds.yandex.net/get-mpic/4377400/img_id2108291851330950560.jpeg/orig" alt="Lenovo Legion T5">
+        <h3>Lenovo Legion T5</h3>
+        <p class="price">Цена: 109990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+      <article class="product" data-id="8" data-name="HP Pavilion Gaming" data-price="97990">
+        <img src="https://kotofoto.ru/product_img/3737/620499/620499_sistemniy_blok_hp_pavilion_tg01_2031ur_cherniy_497k2ea.jpg?v=1700590984" alt="HP Pavilion Gaming">
+        <h3>HP Pavilion Gaming S22</h3>
+        <p class="price">Цена: 97990 руб</p>
+        <button class="add-to-cart">В корзину</button>
+      </article>
+
+    </section>
+    <section id="cart-block" class="cart hidden">
+      <h2>Корзина</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total">Итого: <span id="cart-total">0</span> руб.</div>
+      <h3>Оформление заказа</h3>
+      <form id="order-form">
+        <label>Имя: <input type="text" name="name" required></label>
+        <label>Фамилия: <input type="text" name="surname" required></label>
+        <label>Телефон: <input type="tel" name="phone" required></label>
+        <label>Адрес: <textarea name="address" required></textarea></label>
+        <button type="submit">Оформить заказ</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
