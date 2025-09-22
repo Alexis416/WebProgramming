@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroShop - Интернет-магазин электроники</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>ElectroShop</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Главная</a>
+                <a href="#phones">Телефоны</a>
+                <a href="#laptops">Ноутбуки</a>
+                <a href="#computers">Компьютеры</a>
+            </nav>
+            <div class="cart-container">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cartDropdown">
+        <div class="cart-header">
+            <h3>Корзина</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Корзина пуста</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Итого: <span id="cartTotal">0</span> ₽</strong>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Лучшая электроника по выгодным ценам</h1>
+                <p>Широкий выбор телефонов, ноутбуков и компьютеров с доставкой по всей России</p>
+                <button class="cta-btn">Перейти к покупкам</button>
+            </div>
+        </section>
+
+        <!-- Products Sections -->
+        <section class="products-section" id="phones">
+            <div class="container">
+                <h2>Телефоны</h2>
+                <div class="products-grid" id="phonesGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section" id="laptops">
+            <div class="container">
+                <h2>Ноутбуки</h2>
+                <div class="products-grid" id="laptopsGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section" id="computers">
+            <div class="container">
+                <h2>Компьютеры</h2>
+                <div class="products-grid" id="computersGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Оформление заказа</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="order-form" id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Имя *</label>
+                    <input type="text" id="customerName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Телефон *</label>
+                    <input type="tel" id="customerPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">Email *</label>
+                    <input type="email" id="customerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Адрес доставки *</label>
+                    <textarea id="customerAddress" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="customerComments">Комментарии к заказу</label>
+                    <textarea id="customerComments" name="comments"></textarea>
+                </div>
+                <div class="order-summary">
+                    <h4>Ваш заказ:</h4>
+                    <div id="orderItems"></div>
+                    <div class="order-total">
+                        <strong>Итого: <span id="orderTotal">0</span> ₽</strong>
+                    </div>
+                </div>
+                <button type="submit" class="submit-order-btn">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ElectroShop</h4>
+                    <p>Ваш надежный партнер в мире электроники</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Телефон: +7 (999) 123-45-67</p>
+                    <p>Email: info@electroshop.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Информация</h4>
+                    <p>Доставка и оплата</p>
+                    <p>Гарантия</p>
+                    <p>Возврат товара</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ElectroShop. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
